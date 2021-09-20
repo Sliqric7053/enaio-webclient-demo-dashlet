@@ -1,0 +1,147 @@
+:root {
+  --enaio-primary-color: #0092e1;
+  --white: #ffffff;
+}
+
+.header-banner__text--ecm,
+.header-banner__text--OS {
+  font-size: 2vw;
+}
+
+.section-container {
+  padding: 3vw;
+}
+
+/* collapse effect */
+.collapsible {
+  background-color: var(--white);
+  cursor: pointer;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+}
+
+.collapsible-container > span {
+  cursor: pointer;
+}
+
+.inner-button {
+  background-color: var(--enaio-primary-color);
+  border: 1px solid var(--enaio-primary-color);
+  color: var(--white);
+  padding: 10px 5vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.inner-button .primary {
+  background-color: var(--white);
+  color: black;
+  border: 1px solid #008cba;
+}
+
+.primary:hover {
+  border: none;
+  background-color: var(--white);
+  color: var(--enaio-primary-color);
+  border: 1px solid var(--enaio-primary-color);
+  border-radius: 8px;
+}
+
+.active,
+.collapsible:hover {
+  background-color: var(--white);
+}
+
+.collapsible:after {
+  content: '˄';
+  color: #777;
+  font-weight: lighter;
+  margin-left: 5px;
+  font-size: smaller;
+}
+
+.active:after {
+  content: '˅';
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.content .content-link {
+  color: var(--enaio-primary-color);
+}
+
+.main-container {
+  background: var(--white);
+  padding: 3vw;
+}
+
+.header-banner {
+  background-color: var(--enaio-primary-color);
+  color: var(--white);
+  display: flex;
+  padding: 2%;
+}
+
+.header-banner .header-banner__text {
+  display: flex;
+  flex-direction: column;
+  align-self: end;
+}
+
+.header-banner .header-banner__logo {
+  flex-grow: 1;
+  padding: inherit;
+  margin-top: 25px;
+}
+
+.section-container .section-heading {
+  font-weight: bolder;
+}
+
+.collapsible-container .content-heading {
+  font-weight: 500;
+}
+
+/* Screen size is 601px wide or more */
+@media screen and (min-width: 601px) {
+  .header-banner__logo img {
+    width: 100%;
+    max-width: 225px;
+    height: auto;
+  }
+}
+
+/* Screen size is 600px wide or less */
+@media screen and (max-width: 600px) {
+  .header-banner__logo img {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+  }
+}
+
+/* Screen size is 400px wide or less */
+@media screen and (max-width: 400px) {
+  .header-banner__logo img {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+  }
+
+  .inner-button {
+    font-size: 10px;
+  }
+}

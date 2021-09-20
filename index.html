@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>enaio® webclient demo dashlet</title>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <main class="main-container">
+      <section class="header-container">
+        <div class="header-banner">
+          <div class="header-banner__logo">
+            <img src="assets/enaio_blueline_white.png" />
+          </div>
+          <div class="header-banner__text">
+            <span class="header-banner__text--ecm"></span>
+            <span class="header-banner__text--OS"></span>
+          </div>
+        </div>
+      </section>
+      <section class="section-container">
+        <section class="introduction">
+          <div>
+            <p class="section-heading">Demo Dashlet</p>
+            <p class="section-text">
+              Demo dashlet description or a short introduction adipisicing elit.
+              Aut, minima et minus repellendus, dicta maxime voluptatibus,
+              officia autem alias quisquam eius reiciendis odit? Alias
+              exercitationem animi facere aspernatur quod cum?
+            </p>
+          </div>
+        </section>
+        <section class="events">
+          <div>
+            <p class="section-heading">Events</p>
+            <p class="section-text">
+              Short description with relevant information that can be triggered
+              and where to find the event data (console)
+            </p>
+          </div>
+        </section>
+        <section class="methods">
+          <div>
+            <p class="section-heading">Methods</p>
+            <p class="section-text">
+              Short description with relevant information that can be triggered
+              and where to find the event data (console)
+            </p>
+          </div>
+        </section>
+        <section class="collapsible-container">
+          <button class="collapsible"></button>
+          <span class="content-heading" onclick="collapse(event)"
+            >Open location</span
+          >
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <p>
+              Click Example 1 button to "Open location" in the current browser
+              tab.
+            </p>
+            <p>
+              Click Example 2 button to "Open location" in another browser tab.
+            </p>
+            <button onclick="openLocation()" class="inner-button primary">
+              Example 1
+            </button>
+            <button onclick="openLocationNewTab()" class="inner-button primary">
+              Example 2
+            </button>
+            <p>
+              <a class="content-link" href="#"
+                >Open index data - Documentation link</a
+              >
+            </p>
+          </div>
+          <button class="collapsible"></button>
+          <span class="content-heading" onclick="collapse(event)"
+            >Open index data</span
+          >
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <button onclick="openIndexData()" class="inner-button primary">
+              Example 1
+            </button>
+            <p>
+              <a class="content-link" href="#"
+                >Open index data - Documentation link</a
+              >
+            </p>
+          </div>
+          <button class="collapsible"></button>
+          <span class="content-heading" onclick="collapse(event)"
+            >Get selected objects</span
+          >
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <button onclick="getSelectedObjects()" class="inner-button primary">
+              Example 1
+            </button>
+            <p>
+              <a class="content-link" href="#"
+                >Get selected objects - Documentation link</a
+              >
+            </p>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script src="styles/style.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
