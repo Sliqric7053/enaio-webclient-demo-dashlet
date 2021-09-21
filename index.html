@@ -69,10 +69,10 @@
             <p>
               Click Example 2 button to "Open location" in another browser tab.
             </p>
-            <button onclick="openLocation()" class="inner-button primary">
+            <button id="openLocation" class="inner-button primary">
               Example 1
             </button>
-            <button onclick="openLocationNewTab()" class="inner-button primary">
+            <button id="openLocationNewTab" class="inner-button primary">
               Example 2
             </button>
             <p>
@@ -92,7 +92,7 @@
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </p>
-            <button onclick="openIndexData()" class="inner-button primary">
+            <button id="openIndexData" class="inner-button primary">
               Example 1
             </button>
             <p>
@@ -112,7 +112,7 @@
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </p>
-            <button onclick="getSelectedObjects()" class="inner-button primary">
+            <button id="getSelectedObjects" class="inner-button primary">
               Example 1
             </button>
             <p>
@@ -124,7 +124,9 @@
         </section>
       </section>
     </main>
-    <script src="styles/style.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/style.js"></script>
+    <script type="module" src="js/library.js"></script>
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/action.js"></script>
   </body>
 </html>
