@@ -1,0 +1,13 @@
+image: alpine:latest
+
+pages:
+  image: "node:10.16.2"
+  stage: coverage
+  script:
+    # copy coverage results
+    - mv . public/
+    - echo $CI_PAGES_DOMAIN
+  artifacts:
+    paths:
+      - public
+    expire_in: 30 days

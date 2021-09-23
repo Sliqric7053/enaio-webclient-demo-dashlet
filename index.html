@@ -9,30 +9,45 @@
   </head>
   <body>
     <main class="main-container">
-      <section class="header-container">
+      <div class="header-container">
         <div class="header-banner">
-          <div class="header-banner__logo">
-            <img src="assets/enaio_blueline_white.png" />
+          <div class="header-banner-logo">
+            <img
+              alt="enaio®"
+              title="enaio®"
+              src="assets/enaio_blueline_white.png"
+            />
           </div>
-          <div class="header-banner__text">
-            <span class="header-banner__text--ecm"></span>
-            <span class="header-banner__text--OS"></span>
+          <div class="header-banner-text">
+            <span>Enterprise Content Management</span>
+            <span>© OPTIMAL SYSTEMS - all rights reserved</span>
           </div>
         </div>
-      </section>
-      <section class="section-container">
-        <section class="introduction">
+      </div>
+      <div class="section-container">
+        <div class="introduction">
           <div>
             <p class="section-heading">Demo Dashlet</p>
             <p class="section-text">
-              Demo dashlet description or a short introduction adipisicing elit.
-              Aut, minima et minus repellendus, dicta maxime voluptatibus,
-              officia autem alias quisquam eius reiciendis odit? Alias
-              exercitationem animi facere aspernatur quod cum?
+              Im enaio® webclient stellen wir Ihnen ab der Version 10.0 Service
+              Release 2 eine Möglichkeit zur Verfügung, kundenindividuelle und
+              frei gestaltbare Bereiche – sogenannte Dashlets - zu integrieren.
+              Dashlets unterstützen Sie bei der Umsetzung der
+              unterschiedlichsten Geschäftsprozesse und -szenarien, in dem sie
+              flexibel als weitere Informations- und Interaktionsmöglichkeit für
+              Benutzer kontextabhängig verfügbar gemacht werden können.
+              <br />
+              <br />
+              Für den Vorschaubereich, in dem aktuell bereits die Inhalts- und
+              Detailvorschau angezeigt werden, konfigurieren Sie individuelle
+              Dashlets, die zum Beispiel mithilfe sogenannter Dashlet-Services
+              weitere Informationsquellen einbinden (z. B. Internetseiten wie
+              Wikipedia oder Google Maps). Alternativ integrieren Sie komplette
+              Webanwendungen wie zum Beispiel den enaio® documentviewer.
             </p>
           </div>
-        </section>
-        <section class="events">
+        </div>
+        <div class="events">
           <div>
             <p class="section-heading">Events</p>
             <p class="section-text">
@@ -40,8 +55,8 @@
               and where to find the event data (console)
             </p>
           </div>
-        </section>
-        <section class="methods">
+        </div>
+        <div class="methods">
           <div>
             <p class="section-heading">Methods</p>
             <p class="section-text">
@@ -49,12 +64,12 @@
               and where to find the event data (console)
             </p>
           </div>
-        </section>
-        <section class="collapsible-container">
-          <button class="collapsible"></button>
-          <span class="content-heading" onclick="collapse(event)"
-            >Open location</span
-          >
+        </div>
+        <div class="collapsible-container">
+          <legend onclick="collapse(event)">
+            <button class="collapsible"></button>
+            <span class="content-heading">Open location</span>
+          </legend>
           <div class="content">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -62,29 +77,24 @@
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </p>
-            <p>
-              Click Example 1 button to "Open location" in the current browser
-              tab.
-            </p>
-            <p>
-              Click Example 2 button to "Open location" in another browser tab.
-            </p>
-            <button id="openLocation" class="inner-button primary">
-              Example 1
-            </button>
-            <button id="openLocationNewTab" class="inner-button primary">
-              Example 2
-            </button>
+            <div class="content-button-container">
+              <button id="openLocation" class="inner-button">Example 1</button>
+              <button id="openLocationNewTab" class="inner-button">
+                Example 2
+              </button>
+            </div>
+
             <p>
               <a class="content-link" href="#"
                 >Open index data - Documentation link</a
               >
             </p>
           </div>
-          <button class="collapsible"></button>
-          <span class="content-heading" onclick="collapse(event)"
-            >Open index data</span
-          >
+
+          <legend onclick="collapse(event)">
+            <button class="collapsible"></button>
+            <span class="content-heading">Open index data</span>
+          </legend>
           <div class="content">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -92,19 +102,22 @@
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </p>
-            <button id="openIndexData" class="inner-button primary">
-              Example 1
-            </button>
+
+            <div class="content-button-container">
+              <button id="openIndexData" class="inner-button">Example 1</button>
+            </div>
+
             <p>
               <a class="content-link" href="#"
                 >Open index data - Documentation link</a
               >
             </p>
           </div>
-          <button class="collapsible"></button>
-          <span class="content-heading" onclick="collapse(event)"
-            >Get selected objects</span
-          >
+
+          <legend onclick="collapse(event)">
+            <button class="collapsible"></button>
+            <span class="content-heading">Get selected objects</span>
+          </legend>
           <div class="content">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -112,17 +125,21 @@
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </p>
-            <button id="getSelectedObjects" class="inner-button primary">
-              Example 1
-            </button>
+
+            <div class="content-button-container">
+              <button id="getSelectedObjects" class="inner-button">
+                Example 1
+              </button>
+            </div>
+
             <p>
               <a class="content-link" href="#"
                 >Get selected objects - Documentation link</a
               >
             </p>
           </div>
-        </section>
-      </section>
+        </div>
+      </div>
     </main>
     <script src="js/style.js"></script>
     <script type="module" src="js/library.js"></script>

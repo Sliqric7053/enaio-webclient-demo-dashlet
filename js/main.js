@@ -22,6 +22,7 @@ function handlePostMessage(e) {
     onInit(data);
     context = data.context;
     // TODO: Add info relating to this log in the Doku
+    // "context" will be made available (in the onInit event) in a later enaio webclient service release.
     console.log(`Current context`, context);
   }
   return true;
