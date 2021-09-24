@@ -1,6 +1,12 @@
-let msgQueue = {};
-let alertQueue = [];
+const msgQueue = {};
+const alertQueue = [];
 
+/**
+ * A function that handles "messages" coming from the enaio® webclient.
+ * @param payload an object with { type, data } as payload.
+ * @returns an object with the same shape as the input payload i.e. { type, data }
+ * @link https://help.optimal-systems.com/enaio_develop/display/WEB/5.2+Kommunikation
+ */
 function handleWebclientMessage(payload) {
   if (payload.msgId && msgQueue[payload.msgId]) {
     if (payload.data.result !== undefined) {
@@ -10,6 +16,7 @@ function handleWebclientMessage(payload) {
     }
 
     if (alertQueue.includes(payload.msgId)) {
+      // show payload info in a browser alert box.
       alert(
         `alert for msgId ${payload.msgId}:\n${JSON.stringify(
           payload.data.result
@@ -24,6 +31,14 @@ function handleWebclientMessage(payload) {
   return payload;
 }
 
+/**
+ * A function responsible for sending "messages" to the enaio® webclient.
+ * @param payload an array with ["method-name", [arguments]] as payload. Ref: https://help.optimal-systems.com/enaio_develop/display/WEB/5.4+Dashlet-Methoden
+ * @param targetOrigin a string representing the domain URL where enaio® webclient is served. Example: https://enaio.company-name.de.
+ * @param triggerAlert Boolean. If true, a browser alert (with payload results) will be displayed in the enaio® webclient.
+ * @returns a JavaScript Promise. Ref: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+ * @link https://help.optimal-systems.com/enaio_develop/display/WEB/5.2+Kommunikation
+ */
 async function sendWebclientMessage(
   payload,
   targetOrigin = "*",
@@ -44,8 +59,13 @@ async function sendWebclientMessage(
 
   msgQueue[msgId] = { resolve: _resolve, reject: _reject };
 
+  // "window" is the Dashlet's JavaScript Window object. Ref: https://developer.mozilla.org/en-US/docs/Web/API/Window
+  // "parent" is the enaio® webclient Window object.
+  // postMessage" is the browser API used to communicate between enaio® webclient and the Dashlet. Ref: https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage
   window.parent.postMessage(payload, targetOrigin);
   return promise;
 }
 
+// Export functions to be used in other JavaScript files.
+// Ref: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
 export { handleWebclientMessage, sendWebclientMessage };
