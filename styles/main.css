@@ -1,7 +1,13 @@
 @font-face {
-  font-family: 'enaioOpenSans';
+  font-family: "enaioOpenSans";
   src: url(./font/OpenSans-Regular-webfont.eot); /* IE9 Compat Modes */
-  src: url(./font/OpenSans-Regular-webfont.eot?#iefix) format("embedded-opentype"), /* IE6-IE8 */ url(./font/OpenSans-Regular-webfont.woff) format("woff"), /* Pretty Modern Browsers */ url(./font/OpenSans-Regular-webfont.ttf) format("truetype"), /* Safari, Android, iOS */ url(./font/OpenSans-Regular-webfont.svg#robotolight) format("svg"); /* Legacy iOS */
+  src: url(./font/OpenSans-Regular-webfont.eot?#iefix)
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url(./font/OpenSans-Regular-webfont.woff) format("woff"),
+    /* Pretty Modern Browsers */ url(./font/OpenSans-Regular-webfont.ttf)
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url(./font/OpenSans-Regular-webfont.svg#robotolight) format("svg"); /* Legacy iOS */
 }
 
 :root {
@@ -16,7 +22,7 @@ body {
 }
 
 * {
-  font-family: 'enaioOpenSans', Arial, Sans-Serif;
+  font-family: "enaioOpenSans", Arial, Sans-Serif;
   font-size: 12.5px;
   font-style: normal;
   color: #777;
@@ -25,8 +31,18 @@ body {
 
 .header-banner {
   background: var(--enaio-color-gradient1);
-  background: linear-gradient(225deg, var(--enaio-color-gradient1) 0%, var(--enaio-color-gradient2) 66%, var(--enaio-color-gradient3));
-  background: -webkit-linear-gradient(225deg, var(--enaio-color-gradient1) 0%, var(--enaio-color-gradient2) 66%, var(--enaio-color-gradient3));
+  background: linear-gradient(
+    225deg,
+    var(--enaio-color-gradient1) 0%,
+    var(--enaio-color-gradient2) 66%,
+    var(--enaio-color-gradient3)
+  );
+  background: -webkit-linear-gradient(
+    225deg,
+    var(--enaio-color-gradient1) 0%,
+    var(--enaio-color-gradient2) 66%,
+    var(--enaio-color-gradient3)
+  );
   color: var(--white);
   display: flex;
 }
@@ -47,7 +63,10 @@ body {
   padding: 48px 32px 0 32px;
 }
 
-.main-container, .header-container, .header-banner, .section-container {
+.main-container,
+.header-container,
+.header-banner,
+.section-container {
   width: 100%;
   height: 100%;
   display: block;
@@ -93,7 +112,7 @@ body {
   margin: 16px 0;
 }
 
-.content-button-container{
+.content-button-container {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -111,7 +130,7 @@ body {
   font-size: 14px;
   cursor: pointer;
   box-shadow: 0 1px 0 0 #dedede;
-  transition: background-color .2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
   display: inline-block;
   padding: 0 16px;
   margin-right: 8px;
@@ -129,7 +148,8 @@ body {
   padding-left: 0;
 }
 
-.active, .collapsible:hover {
+.active,
+.collapsible:hover {
   background-color: var(--white);
 }
 
@@ -149,4 +169,8 @@ legend {
 
 legend.active .collapsible:after {
   content: "˅";
+}
+
+.selected-objects {
+  font-weight: bold;
 }
