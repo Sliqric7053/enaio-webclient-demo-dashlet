@@ -12,6 +12,8 @@ let dashletName = "Dashlet";
 // A function responsible for processing all incoming "messages" from enaio® webclient.
 function handlePostMessage(e) {
   webclientOrigin = e.origin;
+  alert(`webclientOrigin : ${webclientOrigin}`);
+
 
   /* Ensure "messages" come from a trusted source i.e. your own enaio® hosted domain.
      Ref: https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage#security_concerns
@@ -53,7 +55,7 @@ function handlePostMessage(e) {
 function initDashlet(data) {
   dashletName =
     data.activeCustomDashlet[
-      "title_" + data.sessionInfo.language.toUpperCase()
+    "title_" + data.sessionInfo.language.toUpperCase()
     ] || "Dashlet";
   lastSelectedEntryOsid = data.lastSelectedEntry.osid;
   currentSelectedOSIDs = data.selectedEntries.map((dmsInfo) => dmsInfo.osid);
