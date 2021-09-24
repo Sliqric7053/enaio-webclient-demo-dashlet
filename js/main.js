@@ -16,6 +16,7 @@ function handlePostMessage(e) {
   // Note, in enaio desktop client, srcOrigin is represented as "file://"
   const srcOrigin = "file://" || "http://10.6.0.197" || "http://10.6.0.165";
   if (webclientOrigin !== srcOrigin) {
+    console.log(`webclientOrigin ${webclientOrigin} is different from srcOrigin ${srcOrigin}`);
     return false;
   }
 
