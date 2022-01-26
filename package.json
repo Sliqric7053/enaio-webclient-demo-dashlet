@@ -1,0 +1,8 @@
+{
+    "scripts": {
+        "deploy": "gh-pages -d . --repo https://github.com/Sliqric7053/enaio-webclient-demo-dashlet.git"
+    },
+    "devDependencies": {
+        "gh-pages": "^3.2.3"
+    }
+}

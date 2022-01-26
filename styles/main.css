@@ -172,7 +172,11 @@ legend.active .collapsible:after {
 }
 
 .selected-objects,
-.notice,
+.bolder,
 .subheading {
   font-weight: 800;
+}
+
+.notice {
+  margin: 6px 0px 22px;
 }
